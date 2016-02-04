@@ -1,4 +1,4 @@
-﻿@model IEnumerable<Revista>
+﻿@model  Task<IEnumerable<Revista>>
 <link rel="stylesheet" href="~/css/revista.css" />
 <div id="divBody">
     <div id="divBodyMain">
@@ -14,17 +14,17 @@
                         </p>
                     </div>
                     <ul class="cbs-List">
-                        @foreach (var revista in Model)
+                        @foreach (var revista in Model.Result)
                         {
                             <li>
                                 <div class="divCompartiMOSSMagazineNumber">
                                     <div class="divPicture">
-                                        <a href="@Url.Action("Detail", new { Name=revista.Titulo})">                                            
+                                        <a href="@Url.Action("Detail", new { Name=revista.Numero})">                                            
                                                 <img src="@revista.UrlPortada" class="cbs-largePictureImg" alt="@revista.Titulo">
                                             </a>
                                     </div>
                                     <div class="divOverlay" style="top: 300px;">
-                                        <a href="@Url.Action("Detail", new { Name=revista.Titulo})">
+                                        <a href="@Url.Action("Detail", new { Name=revista.Numero})">
                                             <h2 class="ms-noWrap"> @revista.Titulo</h2>
                                             <div title=""></div>
                                         </a>

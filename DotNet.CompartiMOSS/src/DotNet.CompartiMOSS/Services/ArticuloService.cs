@@ -1,6 +1,7 @@
 ﻿using System.Collections.Generic;
 using DotNet.CompartiMOSS.Models;
 using System.Linq;
+using System.Threading.Tasks;
 
 namespace DotNet.CompartiMOSS.Services
 {
@@ -18,14 +19,18 @@ namespace DotNet.CompartiMOSS.Services
                 new Articulos {Autor="Juan Carlos Gonzales Martin", NumeroRevista="Número 26 - Diciembre 2016",Texto="",Titulo="Escenarios de uso de PowerShell para shaerPoint" }
             };
         }
-        public IEnumerable<Articulos> GetArticulosByAutor(string autor)
+        public async Task<IEnumerable<Articulos>> GetArticulosByAutor(string autor)
         {
-            return _repository.Where(x => x.Autor.Equals(autor));
+            var compartimossService = new CompartiService();
+            _repository = await compartimossService.SearchArticlesByAutor(autor);
+            return _repository;
         }
 
-        public IEnumerable<Articulos> GetArticulosByRevista(string revista)
+        public async Task<IEnumerable<Articulos>> GetArticulosByRevista(string revista)
         {
-            return _repository.Where(x => x.NumeroRevista.Equals(revista));
+            var compartimossService = new CompartiService();
+            _repository = await compartimossService.SearchArticles(revista);
+            return _repository.Where(x=>x.NumeroRevista.Equals(revista));
         }
     }
 }

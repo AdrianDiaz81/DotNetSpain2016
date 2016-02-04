@@ -66,7 +66,7 @@ h4 {
 
 #divHeader #divLogo {
     float: left;
-    background-image: url('../Images/Layout/Logo380x109.png');
+    background-image: url('../images/Layout/Logo380x109.png');
     background-repeat: no-repeat;
     background-position: left center;
     width: 400px;
@@ -130,13 +130,10 @@ h4 {
     text-align: right;
 }
 
-#divHeader nav#MainMenu ul li a[href="/inicio"] {background: url('../Images/Icons/Menu-Home.png') no-repeat 10px 10px;}
-#divHeader nav#MainMenu ul li a[href="/revistas"] {background: url('../Images/Icons/Menu-Magazines.png') no-repeat 10px 10px;}
-#divHeader nav#MainMenu ul li a[href="/autores"] {background: url('../Images/Icons/Menu-Autors.png') no-repeat 10px 10px;}
-#divHeader nav#MainMenu ul li a[href="/editores"] {background: url('../Images/Icons/Menu-Editors.png') no-repeat 10px 10px;}
-#divHeader nav#MainMenu ul li a[href="/la-revista"] {background: url('../Images/Icons/Menu-Magazine.png') no-repeat 10px 10px;}
-#divHeader nav#MainMenu ul li a[href="/mentoring"] {background: url('../Images/Icons/Menu-Mentoring.png') no-repeat 10px 10px;}
-#divHeader nav#MainMenu ul li a[href="/guias"] {background: url('../Images/Icons/Menu-Guide.png') no-repeat 10px 10px;}
+#divHeader nav#MainMenu ul li .home {background: url('../Images/Icons/Menu-Home.png') no-repeat 10px 10px;}
+#divHeader nav#MainMenu ul li .revista {background: url('../Images/Icons/Menu-Magazines.png') no-repeat 10px 10px;}
+#divHeader nav#MainMenu ul li .autor {background: url('../Images/Icons/Menu-Autors.png') no-repeat 10px 10px;}
+
 
 #divHeader nav#MainMenu ul li a span {
     vertical-align: baseline;

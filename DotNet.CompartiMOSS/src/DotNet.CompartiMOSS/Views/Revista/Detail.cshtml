@@ -1,4 +1,4 @@
-﻿@model Revista
+﻿@model Task<Revista>
 <link rel="stylesheet" href="~/css/revista.css" />
 <div id="divBody">
     <div id="divBodyMain">
@@ -7,7 +7,7 @@
                 <h1>
                     <div data-name="Campo de página: Título">
                         <img src="/Images/Icons/OpenBook.png" alt="Ver número" title="Ver número">
-                        @Model.Titulo
+                        @Model.Result.Titulo
                     </div>
                 </h1>
             </header>
@@ -15,14 +15,14 @@
                 <article id="divLastNumberImg">
                     <div>
                         <div class="ms-rtestate-field">
-                            <img src="@Model.UrlPortada" style="BORDER:0 solid;" />
+                            <img src="@Model.Result.UrlPortada" style="BORDER:0 solid;" />
                         </div>
                     </div>
                 </article>
                 <article id="articleNumberContent">
                     <div id="divMagazineAwards"></div>
                     <div id="divIndex">
-                            @Component.Invoke("ArticulosByRevista", Model.Titulo)
+                            @Component.Invoke("ArticulosByRevista", Model.Result.Numero)
                     </div>
                 </article>
             </div>
@@ -31,7 +31,7 @@
                     <h2>Editorial</h2>
                 </header>
                 <div>
-                    @Model.Editorial
+                    @Model.Result.Editorial
                 </div>
             </article>
             @Component.Invoke("Partner")

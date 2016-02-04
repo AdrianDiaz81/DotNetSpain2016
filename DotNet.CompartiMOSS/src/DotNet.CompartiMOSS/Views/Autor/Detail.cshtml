@@ -1,4 +1,4 @@
-﻿@model DotNet.CompartiMOSS.Models.Autor
+﻿@model Task<Autor>
 <link rel="stylesheet" href="~/css/autordetail.css" />
 <div id="divBody" style="height:auto">
     <div id="divBodyDomain">
@@ -11,20 +11,20 @@
                         </div>
                         <div class="ms-rtestate-field" style="display:inline" aria-labelledby="ctl00_PlaceHolderMain_ctl00_label">
                             <div class="ms-rtestate-field">
-                                <img alt="Adrián Díaz" src="@Model.Image" style="BORDER:0 solid;">
+                                <img alt="Adrián Díaz" src="@Model.Result.Image" style="BORDER:0 solid;">
                             </div>
                         </div>
 
                     </div>
                     <section id="divSocialInfo">
                         <article id="divTwitter">
-                            <a class="linkTwitter" href="http://www.twitter.com/@Model.Twitter">
+                            <a class="linkTwitter" href="http://www.twitter.com/@Model.Result.Twitter">
                                 Twitter
                             </a>
                             <div class="divSocialOverlay" style="top: 70px;">
-                                <a class="linkTwitter" href="http://www.twitter.com/@Model.Twitter">
+                                <a class="linkTwitter" href="http://www.twitter.com/@Model.Result.Twitter">
                                     <span id="spanTwitter">
-                                        @Model.Twitter
+                                        @Model.Result.Twitter
                                     </span>
                                 </a>
                             </div>
@@ -37,7 +37,7 @@
                             </div>
                             <div class="ms-rtestate-field" style="display:inline" aria-labelledby="ctl00_PlaceHolderMain_ctl02_label">
                                 <div class="ms-rtestate-field">
-                                    <a href="@Model.Blog" target="_blank" title="@Model.NameBlog">@Model.NameBlog</a>
+                                    <a href="@Model.Result.Blog" target="_blank" title="@Model.Result.NameBlog">@Model.Result.NameBlog</a>
                                 </div>
                             </div>
 
@@ -49,7 +49,7 @@
                                 </div>
                                 <div class="ms-rtestate-field" style="display:inline" aria-labelledby="ctl00_PlaceHolderMain_ctl03_label">
                                     <div class="ms-rtestate-field">
-                                        <a href="@Model.Blog" target="_blank" title="@Model.NameBlog">@Model.NameBlog</a>
+                                        <a href="@Model.Result.Blog" target="_blank" title="@Model.Result.NameBlog">@Model.Result.NameBlog</a>
                                     </div>
                                 </div>
 
@@ -61,13 +61,13 @@
                     <h1 data-name="Campo de página: Título">
 
 
-                        @Model.Name
+                        @Model.Result.Name
 
                     </h1>
                     <div id="divJobTitle">
 
 
-                        @Model.JobTittle
+                        @Model.Result.JobTittle
 
                     </div>
                 </header>
@@ -77,11 +77,11 @@
 
                         <div style="display:none">Contenido de la página</div>
                         <div class="ms-rtestate-field" style="display:inline" aria-labelledby="ctl00_PlaceHolderMain_ctl06_label">
-                            @Model.Description
+                            @Model.Result.Description
                         </div>
 
                     </div>
-                    @Component.Invoke("ArticulosByAutor",Model.Name)
+                    @Component.Invoke("ArticulosByAutor",Model.Result.Name)
                 </div>
                 <div data-name="EditModePanelShowInEdit">
 

@@ -6,5 +6,6 @@
         public string NumeroRevista { get; set; }
         public string Texto { get; set; }
         public string Autor { get; set; }
+        public string LinkUrl { get; set; }
     }
 }

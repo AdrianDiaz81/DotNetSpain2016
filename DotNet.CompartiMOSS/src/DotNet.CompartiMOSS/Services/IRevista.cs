@@ -1,14 +1,15 @@
 ﻿
 using DotNet.CompartiMOSS.Models;
 using System.Collections.Generic;
+using System.Threading.Tasks;
 
 namespace DotNet.CompartiMOSS.Services
 {
     public interface IRevista
     {
-        Revista GetLastNumber();
+        Task<Revista> GetLastNumber();
 
-        IEnumerable<Revista> GetRevistas();
-        Revista GetRevistaByTitle(string name);
+        Task<IEnumerable<Revista>> GetRevistas();
+        Task<Revista> GetRevistaByTitle(string name);
     }
 }

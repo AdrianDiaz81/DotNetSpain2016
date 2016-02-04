@@ -1,7 +1,8 @@
-﻿@model IEnumerable<Autor>
+﻿@model Task<IEnumerable<Autor>>
+<link rel="stylesheet" href="~/css/autordetail.css" />
  <div id="divBodyMain">
     <ul class="cbs-List">
-        @foreach (var autor in Model)
+        @foreach (var autor in Model.Result)
         {
             <li>
                 <div class="divCompartiMOSSAuthor">

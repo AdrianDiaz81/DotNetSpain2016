@@ -1,11 +1,12 @@
 ﻿using DotNet.CompartiMOSS.Models;
 using System.Collections.Generic;
+using System.Threading.Tasks;
 
 namespace DotNet.CompartiMOSS.Services
 {
    public interface IAutor
     {
-        IEnumerable<Autor> GetAllAutor();
-        Autor GetAutorByName(string name);
+       Task<IEnumerable<Autor>> GetAllAutor();
+       Task<Autor> GetAutorByName(string name);
     }
 }

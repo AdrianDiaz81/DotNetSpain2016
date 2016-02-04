@@ -1,4 +1,4 @@
-﻿@model IEnumerable<Articulos>
+﻿@model  Task<IEnumerable<Articulos>>
 
 <section id="divArticles">
     <header>
@@ -7,7 +7,7 @@
         </h2>
     </header>
     <ul class="cbs-List">
-        @foreach (var articulo in Model)
+        @foreach (var articulo in Model.Result)
         {
             <li>
                 <div class="divCompartiMOSSArticleListItem" data-displaytemplate="Item2Lines">
