@@ -53,6 +53,10 @@ namespace DotNet.CompartiMOSS
             // Add application services.
             services.AddTransient<IEmailSender, AuthMessageSender>();
             services.AddTransient<ISmsSender, AuthMessageSender>();
+            services.AddTransient<IRevista, RevistaService>();
+            services.AddTransient<IPartner, PartnerService>();
+            services.AddTransient<IAutor, AutorService>();
+            services.AddTransient<IArticulos, ArticuloService>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
