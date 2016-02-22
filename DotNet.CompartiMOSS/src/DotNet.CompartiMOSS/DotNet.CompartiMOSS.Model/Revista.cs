@@ -1,4 +1,9 @@
-﻿namespace DotNet.CompartiMOSS.Models
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Threading.Tasks;
+
+namespace DotNet.CompartiMOSS.Model
 {
     public class Revista
     {

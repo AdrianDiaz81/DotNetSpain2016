@@ -1,5 +1,7 @@
-﻿namespace DotNet.CompartiMOSS.Models
+﻿
+namespace DotNet.CompartiMOSS.Model
 {
+
     public class Autor
     {
         public string Name { get; set; }
